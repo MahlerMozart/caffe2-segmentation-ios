@@ -16,18 +16,24 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     var total_fps = 0.0
     let iters_fps = 10.0
     var fps = ""
-    var resImg = UIImage()
+//    var resImg = UIImage()
     
     let foundNilErrorMsg = "[Error] Thrown \n"
     let processingErrorMsg = "[Error] Processing Error \n"
     var result = ""
     var memUsage = 0 as Float
     var elapse = ""
-    
+    var showMask: Bool = false
+
     
     @IBOutlet weak var resultDisplayer: UITextView!
     @IBOutlet weak var memUsageDisplayer: UITextView!
     @IBOutlet weak var resultImage: UIImageView!
+    
+
+    @IBAction func clickShowMaskBtn(_ sender: UIButton) {
+        self.showMask = !self.showMask;
+    }
     
     enum CommonError: Error{
         case FoundNil(String)
@@ -45,6 +51,9 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         //view.layer.addSublayer(previewLayer)
         self.view.addSubview(self.resultDisplayer)
         self.view.addSubview(self.memUsageDisplayer)
+        
+        self.view.addSubview(self.resultImage)
+        
         self.view.bringSubview(toFront: self.resultDisplayer)
         self.view.bringSubview(toFront: self.memUsageDisplayer)
         cameraSession.startRunning()
@@ -173,16 +182,26 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
 //        let tmp = img.cgImage
 //        let W = tmp?.width
 //        let H = tmp?.height
-        let start = CACurrentMediaTime() //CFAbsoluteTimeGetCurrent()
-        let bgra = CVWrapper.preprocessImage(img)
-        resImg = img
+
+        let bgra = CVWrapper.preprocessImage(img, flip: true)
+        var resImg = img
         
+        let start = CACurrentMediaTime() //CFAbsoluteTimeGetCurrent()
         if let predictedResult = caffe.prediction(regarding: bgra){
+            let end = CACurrentMediaTime()
+            let fps = 1.0/(end-start)
+            total_fps += fps
+            avg_fps = total_fps / iters_fps
+            total_fps -= avg_fps;
+            
+            self.fps = "\(end-start) s (\(avg_fps) FPS )"
+            
             switch modelPicked {
             case "originalNet":
                 let background: UIImage = UIImage(named: "timg")!
-                resImg = CVWrapper.postprocessImage(predictedResult, image: img, background: background)
-                
+                resImg = CVWrapper.postprocessImage(predictedResult, image: img, background: background, flip: true, showMask: self.showMask)
+            case "tinyYolo":
+                resImg = CVWrapper.drawBBox(predictedResult, image: img)
             default:
                 print("Result is \n\(predictedResult)")
                 self.result = "\(predictedResult)"
@@ -190,13 +209,7 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
             self.getMemory()
         }
         
-        let end = CACurrentMediaTime()
-        let fps = 1/(end-start)
-        total_fps += fps
-        avg_fps = total_fps / iters_fps
-        total_fps -= avg_fps;
-        
-        self.fps = "\(fps) FPS"
+
         return resImg
     }
     
@@ -205,14 +218,14 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
         let img = sampleBuffer.image()
         
-        self.segmentation(img: img!)
+        let resImg = self.segmentation(img: img!)
         //self.classifier(img: img!)
         // Force UI work to be done in main thread
         DispatchQueue.main.async(execute: {
 //            self.resultDisplayer.text = self.result
 //            self.memUsageDisplayer.text = "Memory usage: \(self.memUsage) MB \nTime elapsed: \(self.elapse) \nModel: \(modelPicked)"
             self.memUsageDisplayer.text = "Memory usage: \(self.memUsage) MB \nFPS: \(self.fps) \nModel: \(modelPicked)"
-            self.resultImage.image = self.resImg
+            self.resultImage.image = resImg
 
 
         })
