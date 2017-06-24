@@ -8,9 +8,14 @@
 
 // You can find full mapping in here : https://gist.github.com/maraoz/388eddec39d60c6d52d4
 
-var caffe = try! Caffe2(initNetNamed: "originalNetInit", predictNetNamed: "originalNetPredict")
-let builtInModels = ["originalNet"]
-var modelPicked = builtInModels[0]
+//var caffe = try! Caffe2(initNetNamed: "originalNetInit", predictNetNamed: "originalNetPredict")
+//var caffe = try! Caffe2(initNetNamed: "tinyYoloInit", predictNetNamed: "tinyYoloPredict")
+var caffe = try! Caffe2(initNetNamed: "decompNetInit_0614", predictNetNamed: "decompNetPredict_0614")
+//var caffe = try! Caffe2(initNetNamed: "mobileNetInit", predictNetNamed: "mobileNetPredict")
+
+
+let builtInModels = ["originalNet", "tinyYolo"]
+var modelPicked = builtInModels[0] // 0
 
 //var caffe = try! Caffe2(initNetNamed: "squeezeNetInit", predictNetNamed: "squeezeNetPredict")
 //let builtInModels = ["squeezeNet","tinyYolo"]
