@@ -197,14 +197,21 @@ CGContextRef CreateRGBABitmapContext (CGImageRef inImage)
         const float scale = std::min(hscale, wscale);
         std::vector<float> inputPlanar(crops * channels * predHeight * predWidth);
         // Scale down the input to a reasonable predictor size.
+        
+        const float b_mean = 104.00698793f;
+        const float g_mean = 116.66876762f;
+        const float r_mean = 122.67891434f;
+        
+        
+        
         for (auto i = 0; i < predHeight; ++i) {
             const int _i = (int) (scale * i);
             for (auto j = 0; j < predWidth; ++j) {
                 const int _j = (int) (scale * j);
                 // The input is of the form RGBA, we only need the RGB part.
-                float red = (float) pixels[(_i * w + _j) * 4 + 0];
-                float green = (float) pixels[(_i * w + _j) * 4 + 1];
-                float blue = (float) pixels[(_i * w + _j) * 4 + 2];
+                float red = (float) pixels[(_i * w + _j) * 4 + 0] - r_mean;
+                float green = (float) pixels[(_i * w + _j) * 4 + 1] - g_mean;
+                float blue = (float) pixels[(_i * w + _j) * 4 + 2] - b_mean;
                 
                 inputPlanar[i * predWidth + j + 0 * size] = blue;
                 inputPlanar[i * predWidth + j + 1 * size] = green;

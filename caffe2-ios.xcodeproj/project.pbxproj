@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		004B63A71EFCC965005FDF08 /* videoSegmentationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004B63A61EFCC965005FDF08 /* videoSegmentationVC.swift */; };
+		004B63AB1EFD01A4005FDF08 /* WIN_20170417_10_19_42_Pro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 004B63AA1EFD01A4005FDF08 /* WIN_20170417_10_19_42_Pro.mp4 */; };
+		00F5DDB71EFB875F0024897D /* mobileNetInit.pb in Resources */ = {isa = PBXBuildFile; fileRef = 00F5DDB51EFB875F0024897D /* mobileNetInit.pb */; };
+		00F5DDB81EFB875F0024897D /* mobileNetPredict.pb in Resources */ = {isa = PBXBuildFile; fileRef = 00F5DDB61EFB875F0024897D /* mobileNetPredict.pb */; };
+		00F5DDBB1EFB87E90024897D /* sparseNetInit.pb in Resources */ = {isa = PBXBuildFile; fileRef = 00F5DDB91EFB87E90024897D /* sparseNetInit.pb */; };
+		00F5DDBC1EFB87E90024897D /* sparseNetPredict.pb in Resources */ = {isa = PBXBuildFile; fileRef = 00F5DDBA1EFB87E90024897D /* sparseNetPredict.pb */; };
+		00F5DDBF1EFB8C800024897D /* decompNetInit_0614.pb in Resources */ = {isa = PBXBuildFile; fileRef = 00F5DDBD1EFB8C800024897D /* decompNetInit_0614.pb */; };
+		00F5DDC01EFB8C800024897D /* decompNetPredict_0614.pb in Resources */ = {isa = PBXBuildFile; fileRef = 00F5DDBE1EFB8C800024897D /* decompNetPredict_0614.pb */; };
 		1B8EC1691EEBC12D00925111 /* originalNetInit.pb in Resources */ = {isa = PBXBuildFile; fileRef = 1B8EC1671EEBC12D00925111 /* originalNetInit.pb */; };
 		1B8EC16A1EEBC12D00925111 /* originalNetPredict.pb in Resources */ = {isa = PBXBuildFile; fileRef = 1B8EC1681EEBC12D00925111 /* originalNetPredict.pb */; };
 		7C03C1A71EBE4E9900BCA7E6 /* libCAFFE2_NNPACK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C03C1A51EBE4E9900BCA7E6 /* libCAFFE2_NNPACK.a */; };
@@ -41,6 +49,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		004B63A61EFCC965005FDF08 /* videoSegmentationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = videoSegmentationVC.swift; sourceTree = "<group>"; };
+		004B63AA1EFD01A4005FDF08 /* WIN_20170417_10_19_42_Pro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = WIN_20170417_10_19_42_Pro.mp4; path = "caffe2-ios/WIN_20170417_10_19_42_Pro.mp4"; sourceTree = "<group>"; };
+		00F5DDB51EFB875F0024897D /* mobileNetInit.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobileNetInit.pb; sourceTree = "<group>"; };
+		00F5DDB61EFB875F0024897D /* mobileNetPredict.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobileNetPredict.pb; sourceTree = "<group>"; };
+		00F5DDB91EFB87E90024897D /* sparseNetInit.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = sparseNetInit.pb; sourceTree = "<group>"; };
+		00F5DDBA1EFB87E90024897D /* sparseNetPredict.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = sparseNetPredict.pb; sourceTree = "<group>"; };
+		00F5DDBD1EFB8C800024897D /* decompNetInit_0614.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = decompNetInit_0614.pb; sourceTree = "<group>"; };
+		00F5DDBE1EFB8C800024897D /* decompNetPredict_0614.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = decompNetPredict_0614.pb; sourceTree = "<group>"; };
 		1B8EC1671EEBC12D00925111 /* originalNetInit.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = originalNetInit.pb; sourceTree = "<group>"; };
 		1B8EC1681EEBC12D00925111 /* originalNetPredict.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = originalNetPredict.pb; sourceTree = "<group>"; };
 		7C03C1A51EBE4E9900BCA7E6 /* libCAFFE2_NNPACK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCAFFE2_NNPACK.a; sourceTree = "<group>"; };
@@ -106,6 +122,7 @@
 		7C8E441F1EB329FC00BA6D76 = {
 			isa = PBXGroup;
 			children = (
+				004B63AA1EFD01A4005FDF08 /* WIN_20170417_10_19_42_Pro.mp4 */,
 				7C8E442A1EB329FC00BA6D76 /* caffe2-ios */,
 				7C8E44291EB329FC00BA6D76 /* Products */,
 				7CE9854C1EB41DB700CA112F /* Frameworks */,
@@ -146,6 +163,7 @@
 				7C9DDAA81EB564760037EC52 /* realTimeDetectorVC.swift */,
 				7C8E442D1EB329FC00BA6D76 /* staticDetectorVC.swift */,
 				7CD2EB061EBC54C700681030 /* advancedTesterVC.swift */,
+				004B63A61EFCC965005FDF08 /* videoSegmentationVC.swift */,
 			);
 			name = viewControllers;
 			sourceTree = "<group>";
@@ -194,6 +212,12 @@
 		7CE985511EB41E2600CA112F /* models */ = {
 			isa = PBXGroup;
 			children = (
+				00F5DDBD1EFB8C800024897D /* decompNetInit_0614.pb */,
+				00F5DDBE1EFB8C800024897D /* decompNetPredict_0614.pb */,
+				00F5DDB91EFB87E90024897D /* sparseNetInit.pb */,
+				00F5DDBA1EFB87E90024897D /* sparseNetPredict.pb */,
+				00F5DDB51EFB875F0024897D /* mobileNetInit.pb */,
+				00F5DDB61EFB875F0024897D /* mobileNetPredict.pb */,
 				1B8EC1671EEBC12D00925111 /* originalNetInit.pb */,
 				1B8EC1681EEBC12D00925111 /* originalNetPredict.pb */,
 				7C57027F1EBC47C4002F6227 /* tinyYoloInit.pb */,
@@ -298,14 +322,21 @@
 			files = (
 				7C5702811EBC47C4002F6227 /* tinyYoloInit.pb in Resources */,
 				7C8E44361EB329FC00BA6D76 /* LaunchScreen.storyboard in Resources */,
+				00F5DDBF1EFB8C800024897D /* decompNetInit_0614.pb in Resources */,
+				00F5DDBC1EFB87E90024897D /* sparseNetPredict.pb in Resources */,
 				7C8E44331EB329FC00BA6D76 /* Assets.xcassets in Resources */,
+				00F5DDBB1EFB87E90024897D /* sparseNetInit.pb in Resources */,
 				7C5702821EBC47C4002F6227 /* tinyYoloPredict.pb in Resources */,
 				7C8E44461EB32A7900BA6D76 /* squeezeNetInit.pb in Resources */,
 				7C8E44311EB329FC00BA6D76 /* Main.storyboard in Resources */,
+				004B63AB1EFD01A4005FDF08 /* WIN_20170417_10_19_42_Pro.mp4 in Resources */,
+				00F5DDC01EFB8C800024897D /* decompNetPredict_0614.pb in Resources */,
 				7CE985591EB422FA00CA112F /* pugs.jpg in Resources */,
+				00F5DDB71EFB875F0024897D /* mobileNetInit.pb in Resources */,
 				7C9DDAA51EB55C7E0037EC52 /* panda.jpeg in Resources */,
 				1B8EC1691EEBC12D00925111 /* originalNetInit.pb in Resources */,
 				1B8EC16A1EEBC12D00925111 /* originalNetPredict.pb in Resources */,
+				00F5DDB81EFB875F0024897D /* mobileNetPredict.pb in Resources */,
 				7C8E44481EB32A7D00BA6D76 /* squeezeNetPredict.pb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +352,7 @@
 				7CE985601EB4290D00CA112F /* UIImage+OpenCV.mm in Sources */,
 				7C9DDAA91EB564760037EC52 /* realTimeDetectorVC.swift in Sources */,
 				7C8E442C1EB329FC00BA6D76 /* AppDelegate.swift in Sources */,
+				004B63A71EFCC965005FDF08 /* videoSegmentationVC.swift in Sources */,
 				7CF78F581EB56A00009DB460 /* config.swift in Sources */,
 				7CE9855C1EB4280500CA112F /* OpenCVWrapper.mm in Sources */,
 				7C8E444D1EB32B2D00BA6D76 /* Caffe2.mm in Sources */,
@@ -463,6 +495,7 @@
 					"$(SRCROOT)/../caffe2/third_party/eigen",
 				);
 				INFOPLIST_FILE = "caffe2-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -500,6 +533,7 @@
 					"$(SRCROOT)/../caffe2/third_party/eigen",
 				);
 				INFOPLIST_FILE = "caffe2-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
