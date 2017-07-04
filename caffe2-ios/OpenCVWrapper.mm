@@ -141,39 +141,10 @@ int W = 181;
     int C = flipSeg.channels();
     int o_size = predictedResult.count;
     int o_npixels = o_size>>1;
-    //    assert(h*w == o_npixels);
-    
-    
-    //    Mat raw_score(h, w, CV_8UC1);
-    //    for(int i=0; i<o_npixels; i++){
-    //        float score_p = exp(2*(res[i+o_npixels] - res[i]));
-    //        raw_score.ptr<uchar>()[i] = uchar(255.0 * score_p / (1+score_p));
-    //    }
-    //
-    //    Mat resized;
-    //    resize(raw_score, resized, Size(dstW, dstH));
-    //    cvtColor(resized, seg, COLOR_GRAY2RGBA);
-    //
-    
+
     cv::Mat raw_score(h, w, CV_32FC1);
     for(int i=0; i<o_npixels; i++){
         raw_score.ptr<float>()[i] = predictedResult[i+o_npixels].floatValue - predictedResult[i].floatValue;
-
-//        raw_score.ptr<float>()[i] = res[i+o_npixels] > res[i];
-//        float score_p = exp(predictedResult[i+o_npixels].floatValue - predictedResult[i].floatValue);
-//        raw_score.ptr<float>()[i] = score_p / (1+score_p);
-
-//        float val = exp(predictedResult[i+o_npixels].floatValue - predictedResult[i].floatValue);
-//
-//        if (val < LB){
-//            raw_score.ptr<float>()[i] = 0.0;
-//        }
-//        else if(val >UB){
-//            raw_score.ptr<float>()[i] = 1.0;
-//        }
-//        else{
-//            raw_score.ptr<float>()[i] = SIGMOID_TABLE[int((val - LB) * 100)];
-//        }
     }
     
     cv::Mat resized;
