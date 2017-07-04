@@ -23,6 +23,9 @@ class videoSegmentationVC: UIViewController {
     var elapse = ""
     var generator: AVAssetImageGenerator?
     var showMask: Bool = false
+    let drawContour: Bool = false
+    let H = 241
+    let W = 181
     
     @IBOutlet weak var resultDisplayer: UITextView!
     @IBOutlet weak var memUsageDisplayer: UITextView!
@@ -91,7 +94,7 @@ class videoSegmentationVC: UIViewController {
             switch modelPicked {
             case "originalNet":
                 let background: UIImage = UIImage(named: "timg")!
-                resImg = CVWrapper.postprocessImage(predictedResult, image: img, background: background, flip: false, showMask: self.showMask)
+                resImg = CVWrapper.postprocessImage(predictedResult, image: img, background: background, flip: false, showMask: self.showMask, showContour: true)
             case "tinyYolo":
                 resImg = CVWrapper.drawBBox(predictedResult, image: img)
             default:

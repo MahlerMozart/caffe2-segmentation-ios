@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VZH-hW-L3h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VZH-hW-L3h">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -350,9 +350,11 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DWG-R1-TR6">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DWG-R1-TR6">
                                 <rect key="frame" x="0.0" y="71" width="375" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="1CT-iB-97e"/>
+                                </constraints>
                                 <color key="textColor" red="0.17173149269999999" green="1" blue="0.14327887710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -363,30 +365,49 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="DWG-R1-TR6" firstAttribute="trailing" secondItem="zq6-PT-RMW" secondAttribute="trailing" id="93e-dp-wU0"/>
                             <constraint firstItem="zq6-PT-RMW" firstAttribute="leading" secondItem="0kG-Iq-a2d" secondAttribute="leadingMargin" constant="-16" id="GPt-nh-bkH"/>
                             <constraint firstItem="pLx-Mh-Npt" firstAttribute="leading" secondItem="0kG-Iq-a2d" secondAttribute="leadingMargin" id="KRw-p7-Rvm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pLx-Mh-Npt" secondAttribute="trailing" id="O8Y-1R-6a5"/>
                             <constraint firstItem="DcF-ED-Qin" firstAttribute="top" secondItem="pLx-Mh-Npt" secondAttribute="bottom" id="QeV-Xm-dwb"/>
                             <constraint firstItem="zq6-PT-RMW" firstAttribute="bottom" secondItem="pLx-Mh-Npt" secondAttribute="bottom" id="WVM-ga-h93"/>
                             <constraint firstItem="DcF-ED-Qin" firstAttribute="top" secondItem="zq6-PT-RMW" secondAttribute="bottom" id="beQ-aV-kOM"/>
+                            <constraint firstItem="DWG-R1-TR6" firstAttribute="top" secondItem="TAO-5f-7US" secondAttribute="bottom" constant="7" id="d6r-Yv-WPh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="zq6-PT-RMW" secondAttribute="trailing" constant="-16" id="doB-Ex-vQX"/>
+                            <constraint firstItem="DWG-R1-TR6" firstAttribute="leading" secondItem="zq6-PT-RMW" secondAttribute="leading" id="y7K-8h-Ktp"/>
                             <constraint firstItem="pLx-Mh-Npt" firstAttribute="top" secondItem="TAO-5f-7US" secondAttribute="bottom" id="zBa-VV-pdc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="OPz-F9-PMo">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="1zF-xN-w06">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="h1B-kz-xff">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Mask">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clickShowMaskBtn:" destination="xCk-mP-GKn" eventType="touchUpInside" id="eaa-8F-Mn4"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" id="OPz-F9-PMo">
+                        <nil key="title"/>
+                        <rightBarButtonItems>
+                            <barButtonItem style="plain" id="1zF-xN-w06">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="h1B-kz-xff">
+                                    <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <state key="normal" title="Mask">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="clickShowMaskBtn:" destination="xCk-mP-GKn" eventType="touchUpInside" id="eaa-8F-Mn4"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="thd-Z2-bf3">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YJQ-zf-zUW">
+                                    <rect key="frame" x="185" y="7" width="83" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <state key="normal" title="Contour">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="onDrawContour:" destination="xCk-mP-GKn" eventType="touchUpInside" id="XEx-Rh-Ix4"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="memUsageDisplayer" destination="DWG-R1-TR6" id="BN9-TI-ieZ"/>
@@ -396,7 +417,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdA-ak-2i6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1236" y="698"/>
+            <point key="canvasLocation" x="1236" y="697.60119940029995"/>
         </scene>
         <!--Video SegmentationVC-->
         <scene sceneID="wBc-0n-yRH">

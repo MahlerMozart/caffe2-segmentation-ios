@@ -13,7 +13,7 @@
 // set the networks enforced image input size. If not set, the images dimensions will be used.
 @property (atomic, assign) CGSize imageInputDimensions;
 
-- (null_unspecified instancetype)init UNAVAILABLE_ATTRIBUTE;
+- (null_unspecified instancetype) init UNAVAILABLE_ATTRIBUTE;
 
 - (null_unspecified instancetype) init:(nonnull NSString*)initNetFilename predict:(nonnull NSString*)predictNetFilename error:(NSError * _Nullable * _Nullable)error
 NS_SWIFT_NAME(init(initNetNamed:predictNetNamed:));

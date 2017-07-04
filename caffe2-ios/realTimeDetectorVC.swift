@@ -24,16 +24,23 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     var memUsage = 0 as Float
     var elapse = ""
     var showMask: Bool = false
+    var showContour: Bool = false
 
     
     @IBOutlet weak var resultDisplayer: UITextView!
     @IBOutlet weak var memUsageDisplayer: UITextView!
     @IBOutlet weak var resultImage: UIImageView!
-    
+
+
+
+    @IBAction func onDrawContour(_ sender: UIButton) {
+        self.showContour = !self.showContour
+    }
 
     @IBAction func clickShowMaskBtn(_ sender: UIButton) {
         self.showMask = !self.showMask;
     }
+
     
     enum CommonError: Error{
         case FoundNil(String)
@@ -199,7 +206,7 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
             switch modelPicked {
             case "originalNet":
                 let background: UIImage = UIImage(named: "timg")!
-                resImg = CVWrapper.postprocessImage(predictedResult, image: img, background: background, flip: true, showMask: self.showMask)
+                resImg = CVWrapper.postprocessImage(predictedResult, image: img, background: background, flip: true, showMask: self.showMask, showContour: self.showContour)
             case "tinyYolo":
                 resImg = CVWrapper.drawBBox(predictedResult, image: img)
             default:
