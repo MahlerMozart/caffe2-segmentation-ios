@@ -12,6 +12,20 @@
 		00AEFF561F0C83E900303C7D /* AES.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AEFF501F0C83E900303C7D /* AES.cpp */; };
 		00AEFF571F0C83E900303C7D /* model_data_store.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AEFF521F0C83E900303C7D /* model_data_store.cpp */; };
 		00AEFF581F0C83E900303C7D /* model_loader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AEFF541F0C83E900303C7D /* model_loader.cpp */; };
+		6116FB6FA5D2D858663152F0 /* mobileNetPredict.pb in Resources */ = {isa = PBXBuildFile; fileRef = 61FBD1BED02C85AC3D390391 /* mobileNetPredict.pb */; };
+		6126C99A37D103D2C80F4030 /* tinyYoloInit.pb in Resources */ = {isa = PBXBuildFile; fileRef = 6136242CE2EAE83F8FD57FC9 /* tinyYoloInit.pb */; };
+		6144F6C71A99DF3FCF04A9FC /* decompNetPredict_0614.pb in Resources */ = {isa = PBXBuildFile; fileRef = 610AD6AAA30E19360E8832DD /* decompNetPredict_0614.pb */; };
+		614DC0AA44293EC981E8A4B4 /* originalNetInit.pb in Resources */ = {isa = PBXBuildFile; fileRef = 612D57F1065D933104B71D0C /* originalNetInit.pb */; };
+		6164DD855E0E8AE55A61BB8C /* sparseNetInit.pb in Resources */ = {isa = PBXBuildFile; fileRef = 615E4CF7FE7B0E8FE53F9E91 /* sparseNetInit.pb */; };
+		617D198815A103476B16373F /* sparseNetPredict.pb in Resources */ = {isa = PBXBuildFile; fileRef = 6185D231922ECBD4E43187E2 /* sparseNetPredict.pb */; };
+		617F2F751F27DE3ED0B37375 /* originalNetPredict.pb in Resources */ = {isa = PBXBuildFile; fileRef = 618A449BDF67DD2E4545AEF7 /* originalNetPredict.pb */; };
+		61D260EF7D7A39C162B9367C /* mobileNetInit.pb in Resources */ = {isa = PBXBuildFile; fileRef = 61D31A2BF517C66306624EE0 /* mobileNetInit.pb */; };
+		61DEAE773BB5BAFA1DF7F71D /* squeezeNetInit.pb in Resources */ = {isa = PBXBuildFile; fileRef = 61C8AD92C16B2E1AAF3C1C4B /* squeezeNetInit.pb */; };
+		61DF1A45B711F0FD6885DFBD /* tinyYoloPredict.pb in Resources */ = {isa = PBXBuildFile; fileRef = 61FCF7EA8B0F7E46F6B6B2DF /* tinyYoloPredict.pb */; };
+		61ED88E074DF42F91AF16E29 /* squeezeNetPredict.pb in Resources */ = {isa = PBXBuildFile; fileRef = 61A3BD56BF53C88D9D2A83CA /* squeezeNetPredict.pb */; };
+		61F187A62A9B17BE45BA5AF0 /* sparse_bigdata_init_net.pb in Resources */ = {isa = PBXBuildFile; fileRef = 61B20EC7AF7717BCDAB50081 /* sparse_bigdata_init_net.pb */; };
+		61FBA0F496B02260A1190015 /* sparse_bigdata_predict_net.pb in Resources */ = {isa = PBXBuildFile; fileRef = 61439E960D449DB12C4F17E8 /* sparse_bigdata_predict_net.pb */; };
+		61FD17FA9C8F91D3C57BF54B /* decompNetInit_0614.pb in Resources */ = {isa = PBXBuildFile; fileRef = 6160524E90D8BE333E578C5E /* decompNetInit_0614.pb */; };
 		7C03C1A71EBE4E9900BCA7E6 /* libCAFFE2_NNPACK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C03C1A51EBE4E9900BCA7E6 /* libCAFFE2_NNPACK.a */; };
 		7C03C1A81EBE4E9900BCA7E6 /* libCAFFE2_PTHREADPOOL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C03C1A61EBE4E9900BCA7E6 /* libCAFFE2_PTHREADPOOL.a */; };
 		7C03C1AB1EBE4EAB00BCA7E6 /* libprotobuf-lite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C03C1A91EBE4EAB00BCA7E6 /* libprotobuf-lite.a */; };
@@ -48,6 +62,20 @@
 		00AEFF531F0C83E900303C7D /* model_data_store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = model_data_store.h; sourceTree = "<group>"; };
 		00AEFF541F0C83E900303C7D /* model_loader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = model_loader.cpp; sourceTree = "<group>"; };
 		00AEFF551F0C83E900303C7D /* model_loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = model_loader.h; sourceTree = "<group>"; };
+		610AD6AAA30E19360E8832DD /* decompNetPredict_0614.pb */ = {isa = PBXFileReference; lastKnownFileType = file.pb; path = decompNetPredict_0614.pb; sourceTree = "<group>"; };
+		612D57F1065D933104B71D0C /* originalNetInit.pb */ = {isa = PBXFileReference; lastKnownFileType = file.pb; path = originalNetInit.pb; sourceTree = "<group>"; };
+		6136242CE2EAE83F8FD57FC9 /* tinyYoloInit.pb */ = {isa = PBXFileReference; lastKnownFileType = file.pb; path = tinyYoloInit.pb; sourceTree = "<group>"; };
+		61439E960D449DB12C4F17E8 /* sparse_bigdata_predict_net.pb */ = {isa = PBXFileReference; lastKnownFileType = file.pb; path = sparse_bigdata_predict_net.pb; sourceTree = "<group>"; };
+		615E4CF7FE7B0E8FE53F9E91 /* sparseNetInit.pb */ = {isa = PBXFileReference; lastKnownFileType = file.pb; path = sparseNetInit.pb; sourceTree = "<group>"; };
+		6160524E90D8BE333E578C5E /* decompNetInit_0614.pb */ = {isa = PBXFileReference; lastKnownFileType = file.pb; path = decompNetInit_0614.pb; sourceTree = "<group>"; };
+		6185D231922ECBD4E43187E2 /* sparseNetPredict.pb */ = {isa = PBXFileReference; lastKnownFileType = file.pb; path = sparseNetPredict.pb; sourceTree = "<group>"; };
+		618A449BDF67DD2E4545AEF7 /* originalNetPredict.pb */ = {isa = PBXFileReference; lastKnownFileType = file.pb; path = originalNetPredict.pb; sourceTree = "<group>"; };
+		61A3BD56BF53C88D9D2A83CA /* squeezeNetPredict.pb */ = {isa = PBXFileReference; lastKnownFileType = file.pb; path = squeezeNetPredict.pb; sourceTree = "<group>"; };
+		61B20EC7AF7717BCDAB50081 /* sparse_bigdata_init_net.pb */ = {isa = PBXFileReference; lastKnownFileType = file.pb; path = sparse_bigdata_init_net.pb; sourceTree = "<group>"; };
+		61C8AD92C16B2E1AAF3C1C4B /* squeezeNetInit.pb */ = {isa = PBXFileReference; lastKnownFileType = file.pb; path = squeezeNetInit.pb; sourceTree = "<group>"; };
+		61D31A2BF517C66306624EE0 /* mobileNetInit.pb */ = {isa = PBXFileReference; lastKnownFileType = file.pb; path = mobileNetInit.pb; sourceTree = "<group>"; };
+		61FBD1BED02C85AC3D390391 /* mobileNetPredict.pb */ = {isa = PBXFileReference; lastKnownFileType = file.pb; path = mobileNetPredict.pb; sourceTree = "<group>"; };
+		61FCF7EA8B0F7E46F6B6B2DF /* tinyYoloPredict.pb */ = {isa = PBXFileReference; lastKnownFileType = file.pb; path = tinyYoloPredict.pb; sourceTree = "<group>"; };
 		7C03C1A51EBE4E9900BCA7E6 /* libCAFFE2_NNPACK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCAFFE2_NNPACK.a; sourceTree = "<group>"; };
 		7C03C1A61EBE4E9900BCA7E6 /* libCAFFE2_PTHREADPOOL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCAFFE2_PTHREADPOOL.a; sourceTree = "<group>"; };
 		7C03C1A91EBE4EAB00BCA7E6 /* libprotobuf-lite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libprotobuf-lite.a"; sourceTree = "<group>"; };
@@ -197,6 +225,20 @@
 		7CE985511EB41E2600CA112F /* models */ = {
 			isa = PBXGroup;
 			children = (
+				615E4CF7FE7B0E8FE53F9E91 /* sparseNetInit.pb */,
+				61D31A2BF517C66306624EE0 /* mobileNetInit.pb */,
+				61B20EC7AF7717BCDAB50081 /* sparse_bigdata_init_net.pb */,
+				610AD6AAA30E19360E8832DD /* decompNetPredict_0614.pb */,
+				61439E960D449DB12C4F17E8 /* sparse_bigdata_predict_net.pb */,
+				61FBD1BED02C85AC3D390391 /* mobileNetPredict.pb */,
+				6185D231922ECBD4E43187E2 /* sparseNetPredict.pb */,
+				612D57F1065D933104B71D0C /* originalNetInit.pb */,
+				61A3BD56BF53C88D9D2A83CA /* squeezeNetPredict.pb */,
+				6160524E90D8BE333E578C5E /* decompNetInit_0614.pb */,
+				618A449BDF67DD2E4545AEF7 /* originalNetPredict.pb */,
+				61C8AD92C16B2E1AAF3C1C4B /* squeezeNetInit.pb */,
+				6136242CE2EAE83F8FD57FC9 /* tinyYoloInit.pb */,
+				61FCF7EA8B0F7E46F6B6B2DF /* tinyYoloPredict.pb */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -305,6 +347,20 @@
 				004B63AB1EFD01A4005FDF08 /* WIN_20170417_10_19_42_Pro.mp4 in Resources */,
 				7CE985591EB422FA00CA112F /* pugs.jpg in Resources */,
 				7C9DDAA51EB55C7E0037EC52 /* panda.jpeg in Resources */,
+				6164DD855E0E8AE55A61BB8C /* sparseNetInit.pb in Resources */,
+				61D260EF7D7A39C162B9367C /* mobileNetInit.pb in Resources */,
+				61F187A62A9B17BE45BA5AF0 /* sparse_bigdata_init_net.pb in Resources */,
+				6144F6C71A99DF3FCF04A9FC /* decompNetPredict_0614.pb in Resources */,
+				61FBA0F496B02260A1190015 /* sparse_bigdata_predict_net.pb in Resources */,
+				6116FB6FA5D2D858663152F0 /* mobileNetPredict.pb in Resources */,
+				617D198815A103476B16373F /* sparseNetPredict.pb in Resources */,
+				614DC0AA44293EC981E8A4B4 /* originalNetInit.pb in Resources */,
+				61ED88E074DF42F91AF16E29 /* squeezeNetPredict.pb in Resources */,
+				61FD17FA9C8F91D3C57BF54B /* decompNetInit_0614.pb in Resources */,
+				617F2F751F27DE3ED0B37375 /* originalNetPredict.pb in Resources */,
+				61DEAE773BB5BAFA1DF7F71D /* squeezeNetInit.pb in Resources */,
+				6126C99A37D103D2C80F4030 /* tinyYoloInit.pb in Resources */,
+				61DF1A45B711F0FD6885DFBD /* tinyYoloPredict.pb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
