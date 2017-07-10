@@ -10,6 +10,7 @@
 #import "Caffe2.h"
 #include "caffe2/core/predictor.h"
 #include "caffe2/utils/proto_utils.h"
+#include "model_loader.h"
 
 
 void ReadProtoIntoNet(std::string fname, caffe2::NetDef* net) {
@@ -118,6 +119,34 @@ CGContextRef CreateRGBABitmapContext (CGImageRef inImage)
     }
     return self;
 }
+
+
+// shenzhenyuan added 170705
+- (instancetype) init: (NSError **)error {
+    self = [super init];
+    
+    
+    ModelLoader modelLoader;
+    char* protoModelBuffer = NULL;
+    char* trainedModelBuffer = NULL;
+    unsigned long protoModelSize, trainedModelSize = 0;
+    modelLoader.loadProtoBuffer(protoModelBuffer, protoModelSize, ModelType_CPU);
+    modelLoader.loadModelBuffer(trainedModelBuffer, trainedModelSize, ModelType_CPU);
+    
+    if (!_predictNet.ParseFromArray(protoModelBuffer, protoModelSize)) {
+        printf("Couldn't parse net from data.\n");
+    }
+    if (!_initNet.ParseFromArray(trainedModelBuffer, trainedModelSize)) {
+        printf("Couldn't parse net from data.\n");
+    }
+
+    if (self){
+        _predictNet.set_name("PredictNet");
+        _predictor = new caffe2::Predictor(_initNet, _predictNet);
+    }
+    return self;
+}
+
 
 -(void) reloadModel:(nonnull NSString*)initNetFilename predict:(nonnull NSString*)predictNetFilename error:(NSError **)error {
 

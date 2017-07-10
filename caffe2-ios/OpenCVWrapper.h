@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 //+ (UIImage*) postprocessImage: (NSArray<NSNumber*>*)predictedResult image:(UIImage*) image background:(UIImage*) background height:(NSInteger)H width:(NSInteger)W;
 
-+ (UIImage*) postprocessImage: (NSArray<NSNumber*>*)predictedResult image:(UIImage*) image background:(UIImage*) background flip:(Boolean) flip showMask:(Boolean) showMask;
++ (UIImage*) postprocessImage: (NSArray<NSNumber*>*)predictedResult image:(UIImage*) image background:(UIImage*) background flip:(Boolean) flip showMask:(Boolean) showMask showContour:(Boolean) showContour;
 
 + (UIImage*) drawBBox: (NSArray<NSNumber*>*)predictedResult image:(UIImage*) image;
 
