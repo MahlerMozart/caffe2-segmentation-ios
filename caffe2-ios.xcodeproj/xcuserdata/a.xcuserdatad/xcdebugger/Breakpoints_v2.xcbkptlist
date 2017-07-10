@@ -810,11 +810,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "caffe2-ios/config.swift"
-            timestampString = "520916493.355942"
+            timestampString = "521345432.010498"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14">
+            startingLineNumber = "16"
+            endingLineNumber = "16">
             <Locations>
                <Location
                   shouldBeEnabled = "No"

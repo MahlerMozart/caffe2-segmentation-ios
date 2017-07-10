@@ -10,7 +10,9 @@
 
 //var caffe = try! Caffe2(initNetNamed: "originalNetInit", predictNetNamed: "originalNetPredict")
 //var caffe = try! Caffe2(initNetNamed: "tinyYoloInit", predictNetNamed: "tinyYoloPredict")
-var caffe = try! Caffe2(initNetNamed: "decompNetInit_0614", predictNetNamed: "decompNetPredict_0614")
+//var caffe = try! Caffe2(initNetNamed: "decompNetInit_0614", predictNetNamed: "decompNetPredict_0614")
+var caffe = try! Caffe2()
+
 //var caffe = try! Caffe2(initNetNamed: "mobileNetInit", predictNetNamed: "mobileNetPredict")
 
 
