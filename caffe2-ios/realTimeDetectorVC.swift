@@ -26,6 +26,9 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     var showMask: Bool = false
     var showContour: Bool = false
 
+    var H = 241
+    var W = 181
+
     
     @IBOutlet weak var resultDisplayer: UITextView!
     @IBOutlet weak var memUsageDisplayer: UITextView!
@@ -140,20 +143,9 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     }()
     
     func setupCameraSession() {
-        var captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) as AVCaptureDevice
-        
-        let frontCamera = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo)
-        
-        for element in frontCamera!{
-            let element = element as! AVCaptureDevice
-            if element.position == AVCaptureDevicePosition.front {
-                captureDevice = element
-                break
-            }
-        }
-        
-        
-        
+        var captureDevice =
+                AVCaptureDevice.defaultDevice(withDeviceType: .builtInWideAngleCamera, mediaType: AVMediaTypeVideo, position: .front)
+
         do {
             let deviceInput = try AVCaptureDeviceInput(device: captureDevice)
             
@@ -190,7 +182,7 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
 //        let W = tmp?.width
 //        let H = tmp?.height
 
-        let bgra = CVWrapper.preprocessImage(img, flip: true)
+        let bgra = CVWrapper.preprocessImage(img, flip: true, height: self.H, width: self.W)
         var resImg = img
         
         let start = CACurrentMediaTime() //CFAbsoluteTimeGetCurrent()
@@ -206,7 +198,9 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
             switch modelPicked {
             case "originalNet":
                 let background: UIImage = UIImage(named: "timg")!
-                resImg = CVWrapper.postprocessImage(predictedResult, image: img, background: background, flip: true, showMask: self.showMask, showContour: self.showContour)
+                resImg = CVWrapper.postprocessImage(predictedResult, image: img, background: background,
+                        flip: true, showMask: self.showMask, showContour: self.showContour,
+                        height: self.H, width: self.W)
             case "tinyYolo":
                 resImg = CVWrapper.drawBBox(predictedResult, image: img)
             default:

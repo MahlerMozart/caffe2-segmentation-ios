@@ -24,8 +24,9 @@ class videoSegmentationVC: UIViewController {
     var generator: AVAssetImageGenerator?
     var showMask: Bool = false
     let drawContour: Bool = false
-    let H = 241
-    let W = 181
+
+    var H = 241
+    var W = 181
     
     @IBOutlet weak var resultDisplayer: UITextView!
     @IBOutlet weak var memUsageDisplayer: UITextView!
@@ -78,7 +79,7 @@ class videoSegmentationVC: UIViewController {
         //        let W = tmp?.width
         //        let H = tmp?.height
         
-        let bgra = CVWrapper.preprocessImage(img, flip: false)
+        let bgra = CVWrapper.preprocessImage(img, flip: false, height: self.H, width: self.W)
         var resImg = img
         
         let start = CACurrentMediaTime() //CFAbsoluteTimeGetCurrent()
@@ -94,7 +95,9 @@ class videoSegmentationVC: UIViewController {
             switch modelPicked {
             case "originalNet":
                 let background: UIImage = UIImage(named: "timg")!
-                resImg = CVWrapper.postprocessImage(predictedResult, image: img, background: background, flip: false, showMask: self.showMask, showContour: true)
+                resImg = CVWrapper.postprocessImage(predictedResult, image: img, background: background,
+                        flip: false, showMask: self.showMask, showContour: true,
+                        height: self.H, width: self.W)
             case "tinyYolo":
                 resImg = CVWrapper.drawBBox(predictedResult, image: img)
             default:

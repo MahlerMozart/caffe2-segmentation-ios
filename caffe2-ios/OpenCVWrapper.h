@@ -13,11 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIImage*) processImageWithOpenCV: (UIImage*) inputImage;
 
-+ (UIImage*) preprocessImage: (UIImage*) inputImage flip:(Boolean) flip;
++ (UIImage*) preprocessImage: (UIImage*) inputImage flip:(Boolean) flip height:(NSInteger)H width:(NSInteger)W;
 
 //+ (UIImage*) postprocessImage: (NSArray<NSNumber*>*)predictedResult image:(UIImage*) image background:(UIImage*) background height:(NSInteger)H width:(NSInteger)W;
 
-+ (UIImage*) postprocessImage: (NSArray<NSNumber*>*)predictedResult image:(UIImage*) image background:(UIImage*) background flip:(Boolean) flip showMask:(Boolean) showMask showContour:(Boolean) showContour;
++ (UIImage*) postprocessImage: (NSArray<NSNumber*>*)predictedResult image:(UIImage*) image background:(UIImage*) background
+                         flip:(Boolean) flip showMask:(Boolean) showMask showContour:(Boolean) showContour
+                         height:(NSInteger)H width:(NSInteger)W;
 
 + (UIImage*) drawBBox: (NSArray<NSNumber*>*)predictedResult image:(UIImage*) image;
 

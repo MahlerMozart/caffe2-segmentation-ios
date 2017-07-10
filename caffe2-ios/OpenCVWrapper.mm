@@ -51,8 +51,8 @@ double SIGMOID_TABLE[] = {
     0.998641, 0.998655, 0.998668, 0.998682, 0.998695, 0.998708, 0.998720, 0.998733, 0.998746, 0.998758, 0.998771, 0.998783, 0.998795, 0.998807, 0.998819, 0.998830, 0.998842, 0.998854, 0.998865, 0.998876, 0.998887, 0.998899, 0.998909, 0.998920, 0.998931, 0.998942, 0.998952, 0.998963, 0.998973, 0.998983, 0.998993, 0.999003, 0.999013, 0.999023, 0.999033, 0.999042, 0.999052, 0.999061, 0.999071, 0.999080
 };
 
-int H = 241;
-int W = 181;
+//int H = 241;
+//int W = 181;
 
 @implementation CVWrapper
 
@@ -61,7 +61,7 @@ int W = 181;
     return inputImage;
 }
 
-+ (UIImage*) preprocessImage: (UIImage*) inputImage flip:(Boolean) flip
++ (UIImage*) preprocessImage: (UIImage*) inputImage flip:(Boolean) flip height:(NSInteger)H width:(NSInteger)W
 {
     //Transform UIImage to cv::Mat
     cv::Mat imageMat;
@@ -73,7 +73,7 @@ int W = 181;
     } else {
         flipImageMat = imageMat;
     }
-    
+
 //    int H = flipImageMat.rows;
 //    int W = flipImageMat.cols;
 //    int npixels = H * W;
@@ -81,13 +81,13 @@ int W = 181;
 //    float b_mean = 104.00698793f;
 //    float g_mean = 116.66876762f;
 //    float r_mean = 122.67891434f;
-    
+
     cv::Mat resized;
     cv::resize(flipImageMat, resized, cv::Size(W,H));
-    
+
     // rgb, minus mean
 //    cv::Mat bgra(H, W, CV_8UC4);
-    
+
 //    for(int i=0; i<H; i++){
 //        for(int j=0; j<W; j++){
 ////            bgra.at<cv::Vec4f>(i,j)[0]= resized.at<cv::Vec4b>(i,j)[0] - r_mean;
@@ -101,12 +101,12 @@ int W = 181;
 //
 //        }
 //    }
-    
+
 //    cv::Mat bgr;
 //    cv::cvtColor(imageMat, bgr, cv::COLOR_BGRA2BGR);
 //    int nchan = bgr.channels();
 //    float * input_data = new float[npixels*nchan];
-//    
+//
 //    uchar * ptr = bgr.data;
 //    for (int i=0; i<H; i++){
 //        for(int j=0; j<W; j++){
@@ -120,7 +120,9 @@ int W = 181;
     
 }
 
-+ (UIImage*) postprocessImage: (NSArray<NSNumber*>*)predictedResult image:(UIImage*) image background:(UIImage*) background flip:(Boolean) flip showMask:(Boolean) showMask showContour:(Boolean) showContour
++ (UIImage*) postprocessImage: (NSArray<NSNumber*>*)predictedResult image:(UIImage*) image background:(UIImage*) background
+                         flip:(Boolean) flip showMask:(Boolean) showMask showContour:(Boolean) showContour
+                         height:(NSInteger)H width:(NSInteger)W
 {
     cv::Mat seg;
     UIImageToMat(image, seg);
@@ -164,8 +166,8 @@ int W = 181;
             }
         }
     }
-    
-    
+
+
     //    Mat filtered(resized.size(), resized.type());
     //    bilateralFilter(resized, filtered, 3, 6, 3);
     
