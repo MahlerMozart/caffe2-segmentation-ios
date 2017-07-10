@@ -30,9 +30,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "291"
-            endingLineNumber = "291"
-            landmarkName = "+drawBBox:image:"
-            landmarkType = "7">
+            endingLineNumber = "291">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -46,9 +44,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "296"
-            endingLineNumber = "296"
-            landmarkName = "+drawBBox:image:"
-            landmarkType = "7">
+            endingLineNumber = "296">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -262,7 +258,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "caffe2-ios/videoSegmentationVC.swift"
@@ -390,7 +386,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "caffe2-ios/videoSegmentationVC.swift"
@@ -403,14 +399,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "caffe2_ios.videoSegmentationVC.finshedCapture (im : Swift.Optional&lt;__ObjC.CGImage&gt;) -&gt; ()"
                   moduleName = "caffe2-ios"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/a/XcodeProjects/Caffe2-iOS/src/caffe2-ios/caffe2-ios/videoSegmentationVC.swift"
-                  timestampString = "520828408.708528"
+                  urlString = "file:///Users/a/Desktop/Caffe2-iOS/src/caffe2-ios/caffe2-ios/videoSegmentationVC.swift"
+                  timestampString = "521343529.637783"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "144"
@@ -418,14 +414,14 @@
                   offsetFromSymbolStart = "344">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "caffe2_ios.videoSegmentationVC.(finshedCapture (im : Swift.Optional&lt;__ObjC.CGImage&gt;) -&gt; ()).(closure #1)"
                   moduleName = "caffe2-ios"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/a/XcodeProjects/Caffe2-iOS/src/caffe2-ios/caffe2-ios/videoSegmentationVC.swift"
-                  timestampString = "520828408.710005"
+                  urlString = "file:///Users/a/Desktop/Caffe2-iOS/src/caffe2-ios/caffe2-ios/videoSegmentationVC.swift"
+                  timestampString = "521343529.639215"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "145"
@@ -438,7 +434,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "caffe2-ios/videoSegmentationVC.swift"
@@ -454,7 +450,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "caffe2-ios/videoSegmentationVC.swift"
@@ -602,7 +598,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "caffe2-ios/videoSegmentationVC.swift"
@@ -627,7 +623,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "276"
             endingLineNumber = "276"
-            landmarkName = "+postprocessImage:image:background:flip:showMask:showContour:"
+            landmarkName = "+drawBBox:image:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -805,6 +801,52 @@
             endingLineNumber = "210"
             landmarkName = "+postprocessImage:image:background:flip:showMask:showContour:"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "caffe2-ios/config.swift"
+            timestampString = "520916493.355942"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_DFFAFFF23405DDCA611B64406B3C7F96_func0"
+                  moduleName = "caffe2-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a/XcodeProjects/Caffe2-iOS/src/caffe2-ios/caffe2-ios/config.swift"
+                  timestampString = "520916519.032258"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "caffe2_ios.caffe.unsafeMutableAddressor : __ObjC.Caffe2"
+                  moduleName = "caffe2-ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/a/XcodeProjects/Caffe2-iOS/src/caffe2-ios/caffe2-ios/config.swift"
+                  timestampString = "520916519.03358"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
