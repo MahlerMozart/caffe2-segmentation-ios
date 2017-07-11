@@ -16,6 +16,9 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     var total_fps = 0.0
     let iters_fps = 10.0
     var fps = ""
+    
+    var currentRow: NSInteger = 0;
+    var itemsDataSource = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14"]
 //    var resImg = UIImage()
     
     let foundNilErrorMsg = "[Error] Thrown \n"
@@ -25,14 +28,49 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     var elapse = ""
     var showMask: Bool = false
     var showContour: Bool = false
+    var showDetails: Bool = false
+    
+    let semaphore = DispatchSemaphore(value: 1)
 
+    var H = 241
+    var W = 181
     
     @IBOutlet weak var resultDisplayer: UITextView!
     @IBOutlet weak var memUsageDisplayer: UITextView!
     @IBOutlet weak var resultImage: UIImageView!
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var settings: UIView!
+    @IBOutlet weak var arrawBtn: UIButton!
+    @IBOutlet weak var filterMarginBottom: NSLayoutConstraint!
+    @IBOutlet weak var inputSizeLabel: UILabel!
+    @IBOutlet weak var speedSlider: UISlider!
+    
+    @IBAction func onSliderValueChanged(_ sender: UISlider) {
+//        inputSizeLabel.text = String(Int(sender.value))
+//        semaphore.wait()
+        self.H = Int((sender.value + 2) / 4) * 4 + 1
+        inputSizeLabel.text = String(self.H)
+        self.W = self.H
+//        semaphore.signal()
+    }
+    
+    @IBAction func onSliderTouchUpInside(_ sender: UISlider) {
+        semaphore.wait()
+        self.H = Int(sender.value)
+        inputSizeLabel.text = String(self.H)
+        self.W = self.H
+        semaphore.signal()
+    }
 
-
-
+    @IBAction func onSliderTouchUpOutside(_ sender: UISlider) {
+        semaphore.wait()
+        self.H = Int(sender.value)
+        inputSizeLabel.text = String(self.H)
+        self.W = self.H
+        semaphore.signal()
+    }
+    
     @IBAction func onDrawContour(_ sender: UIButton) {
         self.showContour = !self.showContour
     }
@@ -49,6 +87,14 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupCameraSession()
+        
+        self.view.addSubview(self.settings);
+        self.view.bringSubview(toFront:self.settings)
+        self.settings.isHidden = true
+        self.settings.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(realTimeDetectorVC.settingViewClick)))
+        
+        self.filterMarginBottom.constant = -self.collectionView.frame.size.height
+      
         print("Initializing ...")
     }
     
@@ -56,13 +102,16 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         super.viewDidAppear(animated)
         
         //view.layer.addSublayer(previewLayer)
-        self.view.addSubview(self.resultDisplayer)
-        self.view.addSubview(self.memUsageDisplayer)
+//        self.view.addSubview(self.resultDisplayer)
+//        self.view.addSubview(self.memUsageDisplayer)
+//
+//        self.view.addSubview(self.resultImage)
         
-        self.view.addSubview(self.resultImage)
+//
+//        self.view.bringSubview(toFront: self.resultDisplayer)
+//        self.view.bringSubview(toFront: self.memUsageDisplayer)
         
-        self.view.bringSubview(toFront: self.resultDisplayer)
-        self.view.bringSubview(toFront: self.memUsageDisplayer)
+        
         cameraSession.startRunning()
     }
     
@@ -103,28 +152,6 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         }
     }
     
-    func classifier(img: UIImage){
-        let start = CACurrentMediaTime()
-        if let predictedResult = caffe.prediction(regarding: img){
-            switch modelPicked {
-            case "squeezeNet":
-                let sorted = predictedResult.map{$0.floatValue}.enumerated().sorted(by: {$0.element > $1.element})[0...10]
-                let finalResult = sorted.map{"\($0.element*100)% chance to be: \(squeezenetClassMapping[$0.offset]!)"}.joined(separator: "\n\n")
-                
-                print("Result is \n\(finalResult)")
-                self.result = finalResult
-            default:
-                print("Result is \n\(predictedResult)")
-                self.result = "\(predictedResult)"
-            }
-            self.getMemory()
-        }
-        
-        let end = CACurrentMediaTime()
-        self.elapse = "\(end - start) seconds"
-        print("Time elapsed of function (classifier): \(self.elapse) seconds")
-    }
-    
     lazy var cameraSession: AVCaptureSession = {
         let s = AVCaptureSession()
         s.sessionPreset = AVCaptureSessionPresetHigh
@@ -140,22 +167,10 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     }()
     
     func setupCameraSession() {
-        var captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) as AVCaptureDevice
-        
-        let frontCamera = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo)
-        
-        for element in frontCamera!{
-            let element = element as! AVCaptureDevice
-            if element.position == AVCaptureDevicePosition.front {
-                captureDevice = element
-                break
-            }
-        }
-        
-        
-        
+        let frontCamera = AVCaptureDevice.defaultDevice(withDeviceType: .builtInWideAngleCamera, mediaType: AVMediaTypeVideo, position: .front)
+
         do {
-            let deviceInput = try AVCaptureDeviceInput(device: captureDevice)
+            let deviceInput = try AVCaptureDeviceInput(device: frontCamera)
             
             cameraSession.beginConfiguration()
             
@@ -185,13 +200,14 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     }
     
     
-    func segmentation(img: UIImage) -> UIImage {
+    func segmentation(img: UIImage, height: Int, width: Int) -> UIImage {
 //        let tmp = img.cgImage
 //        let W = tmp?.width
 //        let H = tmp?.height
-
-        let bgra = CVWrapper.preprocessImage(img, flip: true)
         var resImg = img
+        
+        let bgra = CVWrapper.preprocessImage(img, flip: true, height: height, width: width)
+        
         
         let start = CACurrentMediaTime() //CFAbsoluteTimeGetCurrent()
         if let predictedResult = caffe.prediction(regarding: bgra){
@@ -203,16 +219,10 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
             
             self.fps = "\(end-start) s (\(avg_fps) FPS )"
             
-            switch modelPicked {
-            case "originalNet":
-                let background: UIImage = UIImage(named: "timg")!
-                resImg = CVWrapper.postprocessImage(predictedResult, image: img, background: background, flip: true, showMask: self.showMask, showContour: self.showContour)
-            case "tinyYolo":
-                resImg = CVWrapper.drawBBox(predictedResult, image: img)
-            default:
-                print("Result is \n\(predictedResult)")
-                self.result = "\(predictedResult)"
-            }
+            let background: UIImage = UIImage(named: itemsDataSource[currentRow])!
+            
+            resImg = CVWrapper.postprocessImage(predictedResult, image: img, background: background, flip: true, showMask: self.showMask, showContour: self.showContour, height: height, width: width)
+
             self.getMemory()
         }
         
@@ -220,30 +230,178 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         return resImg
     }
     
-    
-    
-    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
+    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer
+        sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
+//        semaphore.wait()
         let img = sampleBuffer.image()
+        var resImg = img
         
-        let resImg = self.segmentation(img: img!)
-        //self.classifier(img: img!)
+        resImg = self.segmentation(img: img!, height: self.H, width: self.W)
+//        semaphore.signal()
+
         // Force UI work to be done in main thread
         DispatchQueue.main.async(execute: {
-//            self.resultDisplayer.text = self.result
-//            self.memUsageDisplayer.text = "Memory usage: \(self.memUsage) MB \nTime elapsed: \(self.elapse) \nModel: \(modelPicked)"
+        if self.showDetails {
             self.memUsageDisplayer.text = "Memory usage: \(self.memUsage) MB \nFPS: \(self.fps) \nModel: \(modelPicked)"
-            self.resultImage.image = resImg
+        } else {
+            self.memUsageDisplayer.text = ""
+        }
+
+        self.resultImage.image = resImg
 
 
         })
+        
+
     }
     
     func captureOutput(_ captureOutput: AVCaptureOutput!, didDrop sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
         // Here you can count how many frames are dopped
     }
+  
+   
+}
+
+//MARK:-事件处理
+extension realTimeDetectorVC {
     
+    @objc func settingViewClick() {
+        self.settings.isHidden = true
+    }
     
+    @IBAction func moreBtnClick(_ sender: AnyObject) {
+        self.settings.isHidden = false
+    }
     
+    @IBAction func arrawBtnClick(_sender: UIButton) {
+        toggleFilter()
+    }
+    
+    @IBAction func switchCamera(_ sender: AnyObject) {
+        swapCamera()
+    }
+    
+    @IBAction func maskSwitchValueDidChange(sender:UISwitch!) {
+       self.showMask = sender.isOn
+    }
+    
+    @IBAction func contourSwitchValueDidChange(sender:UISwitch!) {
+        self.showContour = sender.isOn
+    }
+    
+    @IBAction func detailsSwitchValueDidChange(sender:UISwitch!) {
+        self.showDetails = sender.isOn
+    }
+    
+    @IBAction func speedSliderValueDidChange(sender:UISlider!) {
+          NSLog("\(sender.value)"  , "")
+    }
+    
+}
+
+extension realTimeDetectorVC {
+    
+   fileprivate func toggleFilter(){
+        if self.filterMarginBottom.constant == 0 {
+            
+            UIView.animate(withDuration: 0.25, animations: {
+            self.filterMarginBottom.constant = -self.collectionView.frame.size.height
+            self.view.layoutIfNeeded()
+            }, completion: { (Bool) in
+                self.arrawBtn.setImage(UIImage(named:"arrow_top"), for: .normal)
+            })
+            
+        } else {
+            UIView.animate(withDuration: 0.25, animations: {
+                self.filterMarginBottom.constant = 0
+                self.view.layoutIfNeeded()
+            }, completion: { (Bool) in
+                self.arrawBtn.setImage(UIImage(named:"arrow_down"), for: .normal)
+            })
+            
+        }
+       
+    }
+
+}
+
+extension realTimeDetectorVC {
+    /// Swap camera and reconfigures camera session with new input
+    fileprivate func swapCamera() {
+        
+        // Get current input
+        guard let input = cameraSession.inputs[0] as? AVCaptureDeviceInput else { return }
+        
+        // Begin new session configuration and defer commit
+        cameraSession.beginConfiguration()
+        defer { cameraSession.commitConfiguration() }
+        
+        // Create new capture device
+        var newDevice: AVCaptureDevice?
+        if input.device.position == .back {
+            newDevice = captureDevice(with: .front)
+        } else {
+            newDevice = captureDevice(with: .back)
+        }
+        
+        // Create new capture input
+        var deviceInput: AVCaptureDeviceInput!
+        do {
+            deviceInput = try AVCaptureDeviceInput(device: newDevice)
+        } catch let error {
+            print(error.localizedDescription)
+            return
+        }
+        
+        // Swap capture device inputs
+        cameraSession.removeInput(input)
+        cameraSession.addInput(deviceInput)
+    }
+    
+    /// Create new capture device with requested position
+    fileprivate func captureDevice(with position: AVCaptureDevicePosition) -> AVCaptureDevice? {
+        
+        let devices = AVCaptureDeviceDiscoverySession(deviceTypes: [ .builtInWideAngleCamera, .builtInMicrophone, .builtInDualCamera, .builtInTelephotoCamera ], mediaType: AVMediaTypeVideo, position: .unspecified).devices
+        
+        if let devices = devices {
+            for device in devices {
+                if device.position == position {
+                    return device
+                }
+            }
+        }
+        
+        return nil
+    }
+    
+}
+
+extension realTimeDetectorVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.itemsDataSource.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "sceneCell", for: indexPath) as! sceneCell
+        
+        cell.iconView.image = UIImage(named: itemsDataSource[indexPath.row])
+        
+        if currentRow == indexPath.row {
+            
+        } else {
+            
+        }
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        currentRow = indexPath.row
+//        collectionView.reloadData()
+    }
+
 }
 
 extension CMSampleBuffer {

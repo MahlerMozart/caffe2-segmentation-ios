@@ -7,93 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		004B63A71EFCC965005FDF08 /* videoSegmentationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004B63A61EFCC965005FDF08 /* videoSegmentationVC.swift */; };
-		004B63AB1EFD01A4005FDF08 /* WIN_20170417_10_19_42_Pro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 004B63AA1EFD01A4005FDF08 /* WIN_20170417_10_19_42_Pro.mp4 */; };
-		00F5DDB71EFB875F0024897D /* mobileNetInit.pb in Resources */ = {isa = PBXBuildFile; fileRef = 00F5DDB51EFB875F0024897D /* mobileNetInit.pb */; };
-		00F5DDB81EFB875F0024897D /* mobileNetPredict.pb in Resources */ = {isa = PBXBuildFile; fileRef = 00F5DDB61EFB875F0024897D /* mobileNetPredict.pb */; };
-		00F5DDBB1EFB87E90024897D /* sparseNetInit.pb in Resources */ = {isa = PBXBuildFile; fileRef = 00F5DDB91EFB87E90024897D /* sparseNetInit.pb */; };
-		00F5DDBC1EFB87E90024897D /* sparseNetPredict.pb in Resources */ = {isa = PBXBuildFile; fileRef = 00F5DDBA1EFB87E90024897D /* sparseNetPredict.pb */; };
-		00F5DDBF1EFB8C800024897D /* decompNetInit_0614.pb in Resources */ = {isa = PBXBuildFile; fileRef = 00F5DDBD1EFB8C800024897D /* decompNetInit_0614.pb */; };
-		00F5DDC01EFB8C800024897D /* decompNetPredict_0614.pb in Resources */ = {isa = PBXBuildFile; fileRef = 00F5DDBE1EFB8C800024897D /* decompNetPredict_0614.pb */; };
-		1B8EC1691EEBC12D00925111 /* originalNetInit.pb in Resources */ = {isa = PBXBuildFile; fileRef = 1B8EC1671EEBC12D00925111 /* originalNetInit.pb */; };
-		1B8EC16A1EEBC12D00925111 /* originalNetPredict.pb in Resources */ = {isa = PBXBuildFile; fileRef = 1B8EC1681EEBC12D00925111 /* originalNetPredict.pb */; };
+		002334CC1F14B99D004304D7 /* Segmentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002334CB1F14B99D004304D7 /* Segmentation.framework */; };
+		00AEFF561F0C83E900303C7D /* AES.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AEFF501F0C83E900303C7D /* AES.cpp */; };
+		00AEFF571F0C83E900303C7D /* model_data_store.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AEFF521F0C83E900303C7D /* model_data_store.cpp */; };
+		00AEFF581F0C83E900303C7D /* model_loader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00AEFF541F0C83E900303C7D /* model_loader.cpp */; };
+		00B8044C1F0DE82C00F45518 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B8044B1F0DE82C00F45518 /* opencv2.framework */; };
+		0B571CCB1F136CF4001747EA /* sceneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B571CCA1F136CF4001747EA /* sceneCell.swift */; };
 		7C03C1A71EBE4E9900BCA7E6 /* libCAFFE2_NNPACK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C03C1A51EBE4E9900BCA7E6 /* libCAFFE2_NNPACK.a */; };
 		7C03C1A81EBE4E9900BCA7E6 /* libCAFFE2_PTHREADPOOL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C03C1A61EBE4E9900BCA7E6 /* libCAFFE2_PTHREADPOOL.a */; };
 		7C03C1AB1EBE4EAB00BCA7E6 /* libprotobuf-lite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C03C1A91EBE4EAB00BCA7E6 /* libprotobuf-lite.a */; };
 		7C03C1AC1EBE4EAB00BCA7E6 /* libprotobuf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C03C1AA1EBE4EAB00BCA7E6 /* libprotobuf.a */; };
 		7C03C1B01EBE844A00BCA7E6 /* libCaffe2_CPU.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C03C1AF1EBE844A00BCA7E6 /* libCaffe2_CPU.a */; };
-		7C5702811EBC47C4002F6227 /* tinyYoloInit.pb in Resources */ = {isa = PBXBuildFile; fileRef = 7C57027F1EBC47C4002F6227 /* tinyYoloInit.pb */; };
-		7C5702821EBC47C4002F6227 /* tinyYoloPredict.pb in Resources */ = {isa = PBXBuildFile; fileRef = 7C5702801EBC47C4002F6227 /* tinyYoloPredict.pb */; };
 		7C8E442C1EB329FC00BA6D76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8E442B1EB329FC00BA6D76 /* AppDelegate.swift */; };
-		7C8E442E1EB329FC00BA6D76 /* staticDetectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8E442D1EB329FC00BA6D76 /* staticDetectorVC.swift */; };
 		7C8E44311EB329FC00BA6D76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C8E442F1EB329FC00BA6D76 /* Main.storyboard */; };
 		7C8E44331EB329FC00BA6D76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C8E44321EB329FC00BA6D76 /* Assets.xcassets */; };
 		7C8E44361EB329FC00BA6D76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C8E44341EB329FC00BA6D76 /* LaunchScreen.storyboard */; };
-		7C8E44461EB32A7900BA6D76 /* squeezeNetInit.pb in Resources */ = {isa = PBXBuildFile; fileRef = 7C8E44451EB32A7900BA6D76 /* squeezeNetInit.pb */; };
-		7C8E44481EB32A7D00BA6D76 /* squeezeNetPredict.pb in Resources */ = {isa = PBXBuildFile; fileRef = 7C8E44471EB32A7D00BA6D76 /* squeezeNetPredict.pb */; };
 		7C8E444D1EB32B2D00BA6D76 /* Caffe2.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7C8E444C1EB32B2D00BA6D76 /* Caffe2.mm */; };
-		7C8E44521EB32EAF00BA6D76 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C8E44511EB32EAF00BA6D76 /* opencv2.framework */; };
 		7C9DDAA51EB55C7E0037EC52 /* panda.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7C9DDAA41EB55C7E0037EC52 /* panda.jpeg */; };
 		7C9DDAA71EB5627D0037EC52 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9DDAA61EB5627D0037EC52 /* AVFoundation.framework */; };
 		7C9DDAA91EB564760037EC52 /* realTimeDetectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C9DDAA81EB564760037EC52 /* realTimeDetectorVC.swift */; };
-		7CD2EB071EBC54C700681030 /* advancedTesterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD2EB061EBC54C700681030 /* advancedTesterVC.swift */; };
 		7CD2EB091EBC569700681030 /* helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD2EB081EBC569700681030 /* helpers.swift */; };
 		7CE9854E1EB41DB700CA112F /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE9854D1EB41DB700CA112F /* libstdc++.tbd */; };
 		7CE985531EB41F8C00CA112F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE985521EB41F8C00CA112F /* Accelerate.framework */; };
 		7CE985551EB41F9400CA112F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE985541EB41F9400CA112F /* Foundation.framework */; };
 		7CE985571EB41F9B00CA112F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE985561EB41F9B00CA112F /* UIKit.framework */; };
 		7CE985591EB422FA00CA112F /* pugs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7CE985581EB422FA00CA112F /* pugs.jpg */; };
-		7CE9855C1EB4280500CA112F /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7CE9855B1EB4280500CA112F /* OpenCVWrapper.mm */; };
-		7CE985601EB4290D00CA112F /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7CE9855F1EB4290D00CA112F /* UIImage+OpenCV.mm */; };
 		7CF78F581EB56A00009DB460 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF78F571EB56A00009DB460 /* config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		004B63A61EFCC965005FDF08 /* videoSegmentationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = videoSegmentationVC.swift; sourceTree = "<group>"; };
-		004B63AA1EFD01A4005FDF08 /* WIN_20170417_10_19_42_Pro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = WIN_20170417_10_19_42_Pro.mp4; path = "caffe2-ios/WIN_20170417_10_19_42_Pro.mp4"; sourceTree = "<group>"; };
-		00F5DDB51EFB875F0024897D /* mobileNetInit.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobileNetInit.pb; sourceTree = "<group>"; };
-		00F5DDB61EFB875F0024897D /* mobileNetPredict.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = mobileNetPredict.pb; sourceTree = "<group>"; };
-		00F5DDB91EFB87E90024897D /* sparseNetInit.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = sparseNetInit.pb; sourceTree = "<group>"; };
-		00F5DDBA1EFB87E90024897D /* sparseNetPredict.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = sparseNetPredict.pb; sourceTree = "<group>"; };
-		00F5DDBD1EFB8C800024897D /* decompNetInit_0614.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = decompNetInit_0614.pb; sourceTree = "<group>"; };
-		00F5DDBE1EFB8C800024897D /* decompNetPredict_0614.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = decompNetPredict_0614.pb; sourceTree = "<group>"; };
-		1B8EC1671EEBC12D00925111 /* originalNetInit.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = originalNetInit.pb; sourceTree = "<group>"; };
-		1B8EC1681EEBC12D00925111 /* originalNetPredict.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = originalNetPredict.pb; sourceTree = "<group>"; };
+		002334CB1F14B99D004304D7 /* Segmentation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Segmentation.framework; sourceTree = "<group>"; };
+		00AEFF501F0C83E900303C7D /* AES.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AES.cpp; sourceTree = "<group>"; };
+		00AEFF511F0C83E900303C7D /* AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AES.h; sourceTree = "<group>"; };
+		00AEFF521F0C83E900303C7D /* model_data_store.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = model_data_store.cpp; sourceTree = "<group>"; };
+		00AEFF531F0C83E900303C7D /* model_data_store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = model_data_store.h; sourceTree = "<group>"; };
+		00AEFF541F0C83E900303C7D /* model_loader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = model_loader.cpp; sourceTree = "<group>"; };
+		00AEFF551F0C83E900303C7D /* model_loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = model_loader.h; sourceTree = "<group>"; };
+		00B8044B1F0DE82C00F45518 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = "caffe2-ios/opencv2.framework"; sourceTree = "<group>"; };
+		0B571CCA1F136CF4001747EA /* sceneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sceneCell.swift; sourceTree = "<group>"; };
 		7C03C1A51EBE4E9900BCA7E6 /* libCAFFE2_NNPACK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCAFFE2_NNPACK.a; sourceTree = "<group>"; };
 		7C03C1A61EBE4E9900BCA7E6 /* libCAFFE2_PTHREADPOOL.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCAFFE2_PTHREADPOOL.a; sourceTree = "<group>"; };
 		7C03C1A91EBE4EAB00BCA7E6 /* libprotobuf-lite.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libprotobuf-lite.a"; sourceTree = "<group>"; };
 		7C03C1AA1EBE4EAB00BCA7E6 /* libprotobuf.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libprotobuf.a; sourceTree = "<group>"; };
 		7C03C1AF1EBE844A00BCA7E6 /* libCaffe2_CPU.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libCaffe2_CPU.a; sourceTree = "<group>"; };
-		7C57027F1EBC47C4002F6227 /* tinyYoloInit.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = tinyYoloInit.pb; sourceTree = "<group>"; };
-		7C5702801EBC47C4002F6227 /* tinyYoloPredict.pb */ = {isa = PBXFileReference; lastKnownFileType = file; path = tinyYoloPredict.pb; sourceTree = "<group>"; };
 		7C8E44281EB329FC00BA6D76 /* caffe2-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "caffe2-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8E442B1EB329FC00BA6D76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7C8E442D1EB329FC00BA6D76 /* staticDetectorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = staticDetectorVC.swift; sourceTree = "<group>"; };
 		7C8E44301EB329FC00BA6D76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C8E44321EB329FC00BA6D76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C8E44351EB329FC00BA6D76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C8E44371EB329FC00BA6D76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C8E44451EB32A7900BA6D76 /* squeezeNetInit.pb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = squeezeNetInit.pb; sourceTree = "<group>"; };
-		7C8E44471EB32A7D00BA6D76 /* squeezeNetPredict.pb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; path = squeezeNetPredict.pb; sourceTree = "<group>"; };
 		7C8E44491EB32A8300BA6D76 /* Prefix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.h; sourceTree = "<group>"; };
 		7C8E444B1EB32B2D00BA6D76 /* Caffe2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Caffe2.h; sourceTree = "<group>"; };
 		7C8E444C1EB32B2D00BA6D76 /* Caffe2.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Caffe2.mm; sourceTree = "<group>"; };
 		7C8E44501EB32C1D00BA6D76 /* caffe2-ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "caffe2-ios-Bridging-Header.h"; sourceTree = "<group>"; };
-		7C8E44511EB32EAF00BA6D76 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		7C9DDAA41EB55C7E0037EC52 /* panda.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = panda.jpeg; sourceTree = "<group>"; };
 		7C9DDAA61EB5627D0037EC52 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7C9DDAA81EB564760037EC52 /* realTimeDetectorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = realTimeDetectorVC.swift; sourceTree = "<group>"; };
-		7CD2EB061EBC54C700681030 /* advancedTesterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = advancedTesterVC.swift; sourceTree = "<group>"; };
 		7CD2EB081EBC569700681030 /* helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = helpers.swift; sourceTree = "<group>"; };
 		7CE9854D1EB41DB700CA112F /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		7CE985521EB41F8C00CA112F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		7CE985541EB41F9400CA112F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7CE985561EB41F9B00CA112F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7CE985581EB422FA00CA112F /* pugs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pugs.jpg; sourceTree = "<group>"; };
-		7CE9855B1EB4280500CA112F /* OpenCVWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.mm; sourceTree = "<group>"; };
-		7CE9855D1EB4281F00CA112F /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
-		7CE9855E1EB428FF00CA112F /* UIImage+OpenCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
-		7CE9855F1EB4290D00CA112F /* UIImage+OpenCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.mm"; sourceTree = "<group>"; };
 		7CF78F571EB56A00009DB460 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,14 +77,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				002334CC1F14B99D004304D7 /* Segmentation.framework in Frameworks */,
 				7C9DDAA71EB5627D0037EC52 /* AVFoundation.framework in Frameworks */,
 				7CE985571EB41F9B00CA112F /* UIKit.framework in Frameworks */,
 				7CE985551EB41F9400CA112F /* Foundation.framework in Frameworks */,
 				7CE985531EB41F8C00CA112F /* Accelerate.framework in Frameworks */,
 				7C03C1AC1EBE4EAB00BCA7E6 /* libprotobuf.a in Frameworks */,
+				00B8044C1F0DE82C00F45518 /* opencv2.framework in Frameworks */,
 				7C03C1B01EBE844A00BCA7E6 /* libCaffe2_CPU.a in Frameworks */,
 				7CE9854E1EB41DB700CA112F /* libstdc++.tbd in Frameworks */,
-				7C8E44521EB32EAF00BA6D76 /* opencv2.framework in Frameworks */,
 				7C03C1A81EBE4E9900BCA7E6 /* libCAFFE2_PTHREADPOOL.a in Frameworks */,
 				7C03C1A71EBE4E9900BCA7E6 /* libCAFFE2_NNPACK.a in Frameworks */,
 				7C03C1AB1EBE4EAB00BCA7E6 /* libprotobuf-lite.a in Frameworks */,
@@ -122,7 +98,6 @@
 		7C8E441F1EB329FC00BA6D76 = {
 			isa = PBXGroup;
 			children = (
-				004B63AA1EFD01A4005FDF08 /* WIN_20170417_10_19_42_Pro.mp4 */,
 				7C8E442A1EB329FC00BA6D76 /* caffe2-ios */,
 				7C8E44291EB329FC00BA6D76 /* Products */,
 				7CE9854C1EB41DB700CA112F /* Frameworks */,
@@ -142,7 +117,7 @@
 			children = (
 				7CD2EB0A1EBC569C00681030 /* util */,
 				7CF78F561EB569ED009DB460 /* config */,
-				7C9DDAAA1EB564DC0037EC52 /* viewControllers */,
+				7C9DDAAA1EB564DC0037EC52 /* view */,
 				7CE985611EB42C0C00CA112F /* wrappers */,
 				7CE9855A1EB4230000CA112F /* testAssets */,
 				7CE985501EB41E0E00CA112F /* dependencies */,
@@ -157,15 +132,13 @@
 			path = "caffe2-ios";
 			sourceTree = "<group>";
 		};
-		7C9DDAAA1EB564DC0037EC52 /* viewControllers */ = {
+		7C9DDAAA1EB564DC0037EC52 /* view */ = {
 			isa = PBXGroup;
 			children = (
 				7C9DDAA81EB564760037EC52 /* realTimeDetectorVC.swift */,
-				7C8E442D1EB329FC00BA6D76 /* staticDetectorVC.swift */,
-				7CD2EB061EBC54C700681030 /* advancedTesterVC.swift */,
-				004B63A61EFCC965005FDF08 /* videoSegmentationVC.swift */,
+				0B571CCA1F136CF4001747EA /* sceneCell.swift */,
 			);
-			name = viewControllers;
+			name = view;
 			sourceTree = "<group>";
 		};
 		7CD2EB0A1EBC569C00681030 /* util */ = {
@@ -179,6 +152,7 @@
 		7CE9854C1EB41DB700CA112F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00B8044B1F0DE82C00F45518 /* opencv2.framework */,
 				7C9DDAA61EB5627D0037EC52 /* AVFoundation.framework */,
 				7CE985561EB41F9B00CA112F /* UIKit.framework */,
 				7CE985541EB41F9400CA112F /* Foundation.framework */,
@@ -203,8 +177,8 @@
 		7CE985501EB41E0E00CA112F /* dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				002334CB1F14B99D004304D7 /* Segmentation.framework */,
 				7CE9854F1EB41DFA00CA112F /* caffe2 */,
-				7C8E44511EB32EAF00BA6D76 /* opencv2.framework */,
 			);
 			name = dependencies;
 			sourceTree = "<group>";
@@ -212,18 +186,6 @@
 		7CE985511EB41E2600CA112F /* models */ = {
 			isa = PBXGroup;
 			children = (
-				00F5DDBD1EFB8C800024897D /* decompNetInit_0614.pb */,
-				00F5DDBE1EFB8C800024897D /* decompNetPredict_0614.pb */,
-				00F5DDB91EFB87E90024897D /* sparseNetInit.pb */,
-				00F5DDBA1EFB87E90024897D /* sparseNetPredict.pb */,
-				00F5DDB51EFB875F0024897D /* mobileNetInit.pb */,
-				00F5DDB61EFB875F0024897D /* mobileNetPredict.pb */,
-				1B8EC1671EEBC12D00925111 /* originalNetInit.pb */,
-				1B8EC1681EEBC12D00925111 /* originalNetPredict.pb */,
-				7C57027F1EBC47C4002F6227 /* tinyYoloInit.pb */,
-				7C5702801EBC47C4002F6227 /* tinyYoloPredict.pb */,
-				7C8E44471EB32A7D00BA6D76 /* squeezeNetPredict.pb */,
-				7C8E44451EB32A7900BA6D76 /* squeezeNetInit.pb */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -240,11 +202,13 @@
 		7CE985611EB42C0C00CA112F /* wrappers */ = {
 			isa = PBXGroup;
 			children = (
+				00AEFF501F0C83E900303C7D /* AES.cpp */,
+				00AEFF511F0C83E900303C7D /* AES.h */,
+				00AEFF521F0C83E900303C7D /* model_data_store.cpp */,
+				00AEFF531F0C83E900303C7D /* model_data_store.h */,
+				00AEFF541F0C83E900303C7D /* model_loader.cpp */,
+				00AEFF551F0C83E900303C7D /* model_loader.h */,
 				7C8E44491EB32A8300BA6D76 /* Prefix.h */,
-				7CE9855B1EB4280500CA112F /* OpenCVWrapper.mm */,
-				7CE9855D1EB4281F00CA112F /* OpenCVWrapper.h */,
-				7CE9855E1EB428FF00CA112F /* UIImage+OpenCV.h */,
-				7CE9855F1EB4290D00CA112F /* UIImage+OpenCV.mm */,
 				7C8E444B1EB32B2D00BA6D76 /* Caffe2.h */,
 				7C8E444C1EB32B2D00BA6D76 /* Caffe2.mm */,
 			);
@@ -320,24 +284,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C5702811EBC47C4002F6227 /* tinyYoloInit.pb in Resources */,
 				7C8E44361EB329FC00BA6D76 /* LaunchScreen.storyboard in Resources */,
-				00F5DDBF1EFB8C800024897D /* decompNetInit_0614.pb in Resources */,
-				00F5DDBC1EFB87E90024897D /* sparseNetPredict.pb in Resources */,
 				7C8E44331EB329FC00BA6D76 /* Assets.xcassets in Resources */,
-				00F5DDBB1EFB87E90024897D /* sparseNetInit.pb in Resources */,
-				7C5702821EBC47C4002F6227 /* tinyYoloPredict.pb in Resources */,
-				7C8E44461EB32A7900BA6D76 /* squeezeNetInit.pb in Resources */,
 				7C8E44311EB329FC00BA6D76 /* Main.storyboard in Resources */,
-				004B63AB1EFD01A4005FDF08 /* WIN_20170417_10_19_42_Pro.mp4 in Resources */,
-				00F5DDC01EFB8C800024897D /* decompNetPredict_0614.pb in Resources */,
 				7CE985591EB422FA00CA112F /* pugs.jpg in Resources */,
-				00F5DDB71EFB875F0024897D /* mobileNetInit.pb in Resources */,
 				7C9DDAA51EB55C7E0037EC52 /* panda.jpeg in Resources */,
-				1B8EC1691EEBC12D00925111 /* originalNetInit.pb in Resources */,
-				1B8EC16A1EEBC12D00925111 /* originalNetPredict.pb in Resources */,
-				00F5DDB81EFB875F0024897D /* mobileNetPredict.pb in Resources */,
-				7C8E44481EB32A7D00BA6D76 /* squeezeNetPredict.pb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,16 +299,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C8E442E1EB329FC00BA6D76 /* staticDetectorVC.swift in Sources */,
-				7CE985601EB4290D00CA112F /* UIImage+OpenCV.mm in Sources */,
 				7C9DDAA91EB564760037EC52 /* realTimeDetectorVC.swift in Sources */,
+				00AEFF571F0C83E900303C7D /* model_data_store.cpp in Sources */,
+				00AEFF581F0C83E900303C7D /* model_loader.cpp in Sources */,
 				7C8E442C1EB329FC00BA6D76 /* AppDelegate.swift in Sources */,
-				004B63A71EFCC965005FDF08 /* videoSegmentationVC.swift in Sources */,
+				0B571CCB1F136CF4001747EA /* sceneCell.swift in Sources */,
 				7CF78F581EB56A00009DB460 /* config.swift in Sources */,
-				7CE9855C1EB4280500CA112F /* OpenCVWrapper.mm in Sources */,
 				7C8E444D1EB32B2D00BA6D76 /* Caffe2.mm in Sources */,
-				7CD2EB071EBC54C700681030 /* advancedTesterVC.swift in Sources */,
 				7CD2EB091EBC569700681030 /* helpers.swift in Sources */,
+				00AEFF561F0C83E900303C7D /* AES.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,12 +431,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = P34G6RK5WS;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/caffe2-ios",
 				);
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PREFIX_HEADER = "caffe2-ios/Prefix.h";
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../caffe2",
@@ -495,7 +447,7 @@
 					"$(SRCROOT)/../caffe2/third_party/eigen",
 				);
 				INFOPLIST_FILE = "caffe2-ios/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -508,6 +460,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "caffe2-ios-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "caffe2-ios/caffe2-ios-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -519,12 +472,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = P34G6RK5WS;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/caffe2-ios",
 				);
+				GCC_INPUT_FILETYPE = automatic;
 				GCC_PREFIX_HEADER = "caffe2-ios/Prefix.h";
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../caffe2",
@@ -533,7 +488,7 @@
 					"$(SRCROOT)/../caffe2/third_party/eigen",
 				);
 				INFOPLIST_FILE = "caffe2-ios/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -547,6 +502,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "caffe2-ios-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "caffe2-ios/caffe2-ios-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
