@@ -7,4 +7,5 @@
 //
 
 #import "Caffe2.h"
-#import "OpenCVWrapper.h"
+#import "Segmentation/OpenCVWrapper.h"
+

@@ -9,22 +9,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "caffe2-ios/realTimeDetectorVC.swift"
-            timestampString = "520508977.317244"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
-            landmarkName = "segmentation(img:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "caffe2-ios/OpenCVWrapper.mm"
             timestampString = "520741906.641672"
             startingColumnNumber = "9223372036854775807"
@@ -258,7 +242,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "caffe2-ios/videoSegmentationVC.swift"
@@ -386,7 +370,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "caffe2-ios/videoSegmentationVC.swift"
@@ -397,44 +381,12 @@
             endingLineNumber = "144"
             landmarkName = "finshedCapture(im:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "caffe2_ios.videoSegmentationVC.finshedCapture (im : Swift.Optional&lt;__ObjC.CGImage&gt;) -&gt; ()"
-                  moduleName = "caffe2-ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/a/Desktop/Caffe2-iOS/src/caffe2-ios/caffe2-ios/videoSegmentationVC.swift"
-                  timestampString = "521343529.637783"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "144"
-                  endingLineNumber = "144"
-                  offsetFromSymbolStart = "344">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "caffe2_ios.videoSegmentationVC.(finshedCapture (im : Swift.Optional&lt;__ObjC.CGImage&gt;) -&gt; ()).(closure #1)"
-                  moduleName = "caffe2-ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/a/Desktop/Caffe2-iOS/src/caffe2-ios/caffe2-ios/videoSegmentationVC.swift"
-                  timestampString = "521343529.639215"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "caffe2-ios/videoSegmentationVC.swift"
@@ -450,7 +402,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "caffe2-ios/videoSegmentationVC.swift"
@@ -598,7 +550,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "caffe2-ios/videoSegmentationVC.swift"
@@ -640,102 +592,6 @@
             startingLineNumber = "64"
             endingLineNumber = "64"
             landmarkName = "+preprocessImage:flip:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "caffe2-ios/realTimeDetectorVC.swift"
-            timestampString = "520508977.317244"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
-            landmarkName = "segmentation(img:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "caffe2_ios.realTimeDetectorVC.segmentation (img : __ObjC.UIImage) -&gt; __ObjC.UIImage"
-                  moduleName = "caffe2-ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/a/XcodeProjects/Caffe2-iOS/src/caffe2-ios/caffe2-ios/realTimeDetectorVC.swift"
-                  timestampString = "519965785.006461"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "206"
-                  endingLineNumber = "206"
-                  offsetFromSymbolStart = "1780">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "caffe2_ios.realTimeDetectorVC.segmentation (img : __ObjC.UIImage) -&gt; __ObjC.UIImage"
-                  moduleName = "caffe2-ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/a/XcodeProjects/Caffe2-iOS/src/caffe2-ios/caffe2-ios/realTimeDetectorVC.swift"
-                  timestampString = "519965785.008622"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "206"
-                  endingLineNumber = "206"
-                  offsetFromSymbolStart = "2012">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "caffe2-ios/realTimeDetectorVC.swift"
-            timestampString = "520508977.317244"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "clickShowMaskBtn(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "caffe2-ios/realTimeDetectorVC.swift"
-            timestampString = "520508977.317244"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "realTimeDetectorVC"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "caffe2-ios/realTimeDetectorVC.swift"
-            timestampString = "520508977.317244"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "clickShowMaskBtn(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -810,11 +666,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "caffe2-ios/config.swift"
-            timestampString = "521345432.010498"
+            timestampString = "520916493.355942"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16">
+            startingLineNumber = "14"
+            endingLineNumber = "14">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
