@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cedfa9c5-3113-4f66-b1d0-6a4e70b25e74" name="Default" comment="show contour after segmentation">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/caffe2-ios/AES.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/caffe2-ios/AES.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/caffe2-ios/model_data_store.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/caffe2-ios/model_data_store.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/caffe2-ios/model_loader.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/caffe2-ios/model_loader.h" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/WIN_20170417_10_19_42_Pro.mp4" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/caffe2-ios/caffe2-ios/AppDelegate.swift" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/caffe2-ios/caffe2-ios/Assets.xcassets/AppIcon.appiconset/Contents.json" afterPath="" />
@@ -685,10 +679,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/advancedTesterVC.swift" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caffe2-ios.xcodeproj/project.xcworkspace/xcuserdata/a.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/caffe2-ios.xcodeproj/project.xcworkspace/xcuserdata/a.xcuserdatad/UserInterfaceState.xcuserstate" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caffe2-ios.xcodeproj/project.xcworkspace/xcuserdata/a.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/caffe2-ios.xcodeproj/project.xcworkspace/xcuserdata/a.xcuserdatad/xcschemes/xcschememanagement.plist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caffe2-ios.xcodeproj/xcuserdata/a.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/caffe2-ios.xcodeproj/xcuserdata/a.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caffe2-ios.xcodeproj/xcuserdata/a.xcuserdatad/xcschemes/caffe2-ios.xcscheme" afterPath="$PROJECT_DIR$/caffe2-ios.xcodeproj/xcuserdata/a.xcuserdatad/xcschemes/caffe2-ios.xcscheme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caffe2-ios.xcodeproj/xcuserdata/a.xcuserdatad/xcschemes/xcschememanagement.plist" afterPath="$PROJECT_DIR$/caffe2-ios.xcodeproj/xcuserdata/a.xcuserdatad/xcschemes/xcschememanagement.plist" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -726,8 +716,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="216" />
-    <option name="y" value="88" />
+    <option name="x" value="86" />
+    <option name="y" value="58" />
     <option name="width" value="1792" />
     <option name="height" value="972" />
   </component>
@@ -1020,7 +1010,7 @@
       <workItem from="1497691761202" duration="4138000" />
       <workItem from="1498124601192" duration="513000" />
       <workItem from="1499149418883" duration="4407000" />
-      <workItem from="1499754810677" duration="1983000" />
+      <workItem from="1499754810677" duration="2221000" />
     </task>
     <task id="LOCAL-00001" summary="show contour after segmentation">
       <created>1499152912143</created>
@@ -1043,11 +1033,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499771357892</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add ui">
+      <created>1499771633666</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1499771633666</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13290000" />
+    <option name="totallyTimeSpent" value="13528000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1059,7 +1056,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="216" y="88" width="1792" height="972" extended-state="0" />
+    <frame x="86" y="58" width="1792" height="972" extended-state="0" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20045172" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1117,7 +1114,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="show contour after segmentation" />
     <MESSAGE value="modify ui" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify ui" />
+    <MESSAGE value="add ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
