@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cedfa9c5-3113-4f66-b1d0-6a4e70b25e74" name="Default" comment="show contour after segmentation">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/caffe2-ios/sparse_bigdata_init_net.pb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/caffe2-ios/sparse_bigdata_predict_net.pb" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/WIN_20170417_10_19_42_Pro.mp4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/caffe2-ios/caffe2-ios/AppDelegate.swift" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/caffe2-ios/caffe2-ios/Assets.xcassets/AppIcon.appiconset/Contents.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/caffe2-ios/caffe2-ios/Assets.xcassets/Contents.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/caffe2-ios/caffe2-ios/Assets.xcassets/timg.imageset/Contents.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/caffe2-ios/caffe2-ios/Assets.xcassets/timg.imageset/timg.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/caffe2-ios/caffe2-ios/Base.lproj/LaunchScreen.storyboard" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/caffe2-ios/caffe2-ios/Base.lproj/Main.storyboard" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/caffe2-ios/caffe2-ios/advancedTesterVC.swift" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/caffe2-ios/caffe2-ios/caffe2-ios/AppDelegate.swift" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/caffe2-ios/caffe2-ios/caffe2-ios/Assets.xcassets/AppIcon.appiconset/Contents.json" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/caffe2-ios/caffe2-ios/caffe2-ios/Assets.xcassets/Contents.json" afterPath="" />
@@ -677,8 +671,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/advancedTesterVC.swift" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/AppDelegate.swift" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/caffe2-ios/advancedTesterVC.swift" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caffe2-ios.xcodeproj/project.xcworkspace/xcuserdata/a.xcuserdatad/UserInterfaceState.xcuserstate" afterPath="$PROJECT_DIR$/caffe2-ios.xcodeproj/project.xcworkspace/xcuserdata/a.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caffe2-ios.xcodeproj/xcuserdata/a.xcuserdatad/xcschemes/caffe2-ios.xcscheme" afterPath="$PROJECT_DIR$/caffe2-ios.xcodeproj/xcuserdata/a.xcuserdatad/xcschemes/caffe2-ios.xcscheme" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/caffe2-ios/config.swift" afterPath="$PROJECT_DIR$/caffe2-ios/config.swift" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -692,7 +686,7 @@
     <favorites_list name="caffe2-ios" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -1011,6 +1005,7 @@
       <workItem from="1498124601192" duration="513000" />
       <workItem from="1499149418883" duration="4407000" />
       <workItem from="1499754810677" duration="2221000" />
+      <workItem from="1499772055632" duration="8000" />
     </task>
     <task id="LOCAL-00001" summary="show contour after segmentation">
       <created>1499152912143</created>
@@ -1044,7 +1039,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13528000" />
+    <option name="totallyTimeSpent" value="13536000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
