@@ -190,6 +190,7 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     func segmentation(img: UIImage, height: Int, width: Int) -> UIImage {
 
+        let start = CACurrentMediaTime() //CFAbsoluteTimeGetCurrent()
 
         var resImg = img
         
@@ -199,22 +200,17 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
             
             let background: UIImage = UIImage(named: itemsDataSource[currentRow])!
             
-            let start = CACurrentMediaTime() //CFAbsoluteTimeGetCurrent()
-
-            
             resImg = CVWrapper.postprocessImage(predictedResult, image: img, background: background, flip: true, showMask: self.showMask, showContour: self.showContour, height: height, width: width)
-            
-            let end = CACurrentMediaTime()
-            let fps = 1.0/(end-start)
-            total_fps += fps
-            avg_fps = total_fps / iters_fps
-            total_fps -= avg_fps;
-            
-            self.fps = "\(end-start) s (\(avg_fps) FPS )"
 
             self.getMemory()
         }
-        
+        let end = CACurrentMediaTime()
+        let fps = 1.0/(end-start)
+        total_fps += fps
+        avg_fps = total_fps / iters_fps
+        total_fps -= avg_fps;
+
+        self.fps = "\(end-start) s (\(avg_fps) FPS )"
 
         return resImg
     }
