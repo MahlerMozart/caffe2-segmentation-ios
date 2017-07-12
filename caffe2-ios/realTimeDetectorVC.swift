@@ -100,18 +100,6 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        //view.layer.addSublayer(previewLayer)
-//        self.view.addSubview(self.resultDisplayer)
-//        self.view.addSubview(self.memUsageDisplayer)
-//
-//        self.view.addSubview(self.resultImage)
-        
-//
-//        self.view.bringSubview(toFront: self.resultDisplayer)
-//        self.view.bringSubview(toFront: self.memUsageDisplayer)
-        
-        
         cameraSession.startRunning()
     }
     
@@ -201,16 +189,21 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
     
     
     func segmentation(img: UIImage, height: Int, width: Int) -> UIImage {
-//        let tmp = img.cgImage
-//        let W = tmp?.width
-//        let H = tmp?.height
+
+
         var resImg = img
         
         let bgra = CVWrapper.preprocessImage(img, flip: true, height: height, width: width)
         
-        
-        let start = CACurrentMediaTime() //CFAbsoluteTimeGetCurrent()
         if let predictedResult = caffe.prediction(regarding: bgra){
+            
+            let background: UIImage = UIImage(named: itemsDataSource[currentRow])!
+            
+            let start = CACurrentMediaTime() //CFAbsoluteTimeGetCurrent()
+
+            
+            resImg = CVWrapper.postprocessImage(predictedResult, image: img, background: background, flip: true, showMask: self.showMask, showContour: self.showContour, height: height, width: width)
+            
             let end = CACurrentMediaTime()
             let fps = 1.0/(end-start)
             total_fps += fps
@@ -218,10 +211,6 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
             total_fps -= avg_fps;
             
             self.fps = "\(end-start) s (\(avg_fps) FPS )"
-            
-            let background: UIImage = UIImage(named: itemsDataSource[currentRow])!
-            
-            resImg = CVWrapper.postprocessImage(predictedResult, image: img, background: background, flip: true, showMask: self.showMask, showContour: self.showContour, height: height, width: width)
 
             self.getMemory()
         }
@@ -242,7 +231,8 @@ class realTimeDetectorVC: UIViewController, AVCaptureVideoDataOutputSampleBuffer
         // Force UI work to be done in main thread
         DispatchQueue.main.async(execute: {
         if self.showDetails {
-            self.memUsageDisplayer.text = "Memory usage: \(self.memUsage) MB \nFPS: \(self.fps) \nModel: \(modelPicked)"
+            self.memUsageDisplayer.text = "Memory usage: \(self.memUsage) MB \nSpeed: \(self.fps)"
+            
         } else {
             self.memUsageDisplayer.text = ""
         }
